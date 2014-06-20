@@ -1,6 +1,6 @@
 namespace SQLiteApp
 {
-	class Store
+	public class Store
 	{
 		public string StoreID { get; set; }
 		public string StoreName { get; set; }
