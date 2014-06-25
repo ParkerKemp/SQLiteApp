@@ -60,7 +60,7 @@ namespace SQLiteApp
 		public Order[] GetOrdersForStore(string storeID)
 		{
 			List<Order> ret = new List<Order>();
-			string query = "SELECT O.*, S.StoreName FROM Orders AS O, Stores AS S WHERE O.StoreID = @StoreID AND O.StoreID = S.StoreID";
+			string query = "SELECT * FROM Orders WHERE StoreID = @StoreID";
 
 			using (SqliteConnection connection = new SqliteConnection("Data Source=" + _dbPath + ";Version=3"))
 			{
@@ -74,7 +74,7 @@ namespace SQLiteApp
 				{
 					try
 					{
-						ret.Add(new Order((string)reader["StoreID"], (string)reader["StoreName"], (string)reader["OrderID"], (string)reader["Date"], (int)reader["TotalItems"],
+						ret.Add(new Order((string)reader["StoreID"], (string)reader["OrderID"], (string)reader["Date"], (int)reader["TotalItems"],
 										(double)reader["TotalCost"], (string)reader["ContactName"], reader["RushOrder"].ToString().Equals("True")));
 					}
 					catch (Exception e)
