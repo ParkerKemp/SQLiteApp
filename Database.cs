@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SQLiteApp
 {
-	class Database
+	public class Database
 	{
 		private string _dbPath;
 
