@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 namespace SQLiteApp
 {
 	public class Store
@@ -17,6 +18,7 @@ namespace SQLiteApp
 		public long TotalOrders { get; set; }
 		public double TotalExpenses { get; set; }
 
+		[JsonConstructor]
 		public Store(string storeID, string storeName, string storeNum, string sequenceNum, string managerName, string phoneNum,
 			string address1, string address2, string city, string state, int zip, int territoryNum, long totalOrders, double totalExpenses)
 		{
@@ -34,6 +36,23 @@ namespace SQLiteApp
 			TerritoryNum = territoryNum;
 			TotalOrders = totalOrders;
 			TotalExpenses = totalExpenses;
+		}
+
+		public Store(string storeID, string storeName, string storeNum, string sequenceNum, string managerName, string phoneNum,
+			string address1, string address2, string city, string state, int zip, int territoryNum)
+		{
+			StoreID = storeID;
+			StoreName = storeName;
+			StoreNum = storeNum;
+			SequenceNum = sequenceNum;
+			ManagerName = managerName;
+			PhoneNum = phoneNum;
+			Address1 = address1;
+			Address2 = address2;
+			City = city;
+			State = state;
+			Zip = zip;
+			TerritoryNum = territoryNum;
 		}
 	}
 }
