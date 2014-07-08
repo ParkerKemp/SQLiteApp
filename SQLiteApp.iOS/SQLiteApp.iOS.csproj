@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{7937CB5B-1538-42BF-9891-3F8293A5B534}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SQLiteApp.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>SQLiteApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="System.Data" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="TableView Sources\OrderSummarySource.cs" />
+    <Compile Include="TableView Sources\StoreNameSource.cs" />
+    <Compile Include="TableView Sources\Cell Prototypes\OrderSummaryCell.cs" />
+    <Compile Include="TableView Sources\Cell Prototypes\OrderSummaryCell.designer.cs">
+      <DependentUpon>OrderSummaryCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Orders\AllOrdersViewController.cs" />
+    <Compile Include="View Controllers\Orders\AllOrdersViewController.designer.cs">
+      <DependentUpon>AllOrdersViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Stores\AllStoresViewController.cs" />
+    <Compile Include="View Controllers\Stores\AllStoresViewController.designer.cs">
+      <DependentUpon>AllStoresViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Stores\SearchStoresViewController.cs" />
+    <Compile Include="View Controllers\Stores\SearchStoresViewController.designer.cs">
+      <DependentUpon>SearchStoresViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Orders\OrderDetailViewController.cs" />
+    <Compile Include="View Controllers\Orders\OrderDetailViewController.designer.cs">
+      <DependentUpon>OrderDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Stores\StoreDetailsViewController.cs" />
+    <Compile Include="View Controllers\Stores\StoreDetailsViewController.designer.cs">
+      <DependentUpon>StoreDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Stores\AddStoreViewController.cs" />
+    <Compile Include="View Controllers\Stores\AddStoreViewController.designer.cs">
+      <DependentUpon>AddStoreViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Stores\StoreEntryViewController.cs" />
+    <Compile Include="View Controllers\Stores\StoreEntryViewController.designer.cs">
+      <DependentUpon>StoreEntryViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Controllers\Stores\EditStoreViewController.cs" />
+    <Compile Include="View Controllers\Stores\EditStoreViewController.designer.cs">
+      <DependentUpon>EditStoreViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard.storyboard" />
+    <InterfaceDefinition Include="View Controllers\Stores\EditStoreViewController.xib" />
+  </ItemGroup>
+  <Import Project="..\SQLiteApp.Core\SQLiteApp.Core.projitems" Label="Shared" Condition="Exists('..\SQLiteApp.Core\SQLiteApp.Core.projitems')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="View Controllers\" />
+    <Folder Include="TableView Sources\" />
+    <Folder Include="TableView Sources\Cell Prototypes\" />
+    <Folder Include="View Controllers\Orders\" />
+    <Folder Include="View Controllers\Stores\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Stores.sqlite" />
+  </ItemGroup>
+</Project>

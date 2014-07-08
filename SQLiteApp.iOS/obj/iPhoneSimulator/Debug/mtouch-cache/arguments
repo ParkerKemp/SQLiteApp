@@ -1,0 +1,33 @@
+# Version: 7.2.5.4 (e7f4f92)
+# [first argument, ignore] # /Users/Parker/Projects/SQLiteApp/SQLiteApp.iOS/bin/iPhoneSimulator/Debug/mtouch.exe
+/Developer/MonoTouch/usr/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/Parker/Projects/SQLiteApp/SQLiteApp.iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	-sim \
+	/Users/Parker/Projects/SQLiteApp/SQLiteApp.iOS/bin/iPhoneSimulator/Debug/SQLiteAppiOS.app \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/Mono.Data.Sqlite.dll \
+	-r \
+	/Developer/MonoTouch/usr/lib/mono/2.1/System.Data.dll \
+	-r \
+	/Users/Parker/Projects/SQLiteApp/packages/Newtonsoft.Json.6.0.3/lib/portable-net40+sl4+wp7+win8/Newtonsoft.Json.dll \
+	-debug \
+	-nolink \
+	-sdk \
+	7.1 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	/Users/Parker/Projects/SQLiteApp/SQLiteApp.iOS/bin/iPhoneSimulator/Debug/SQLiteApp.exe \

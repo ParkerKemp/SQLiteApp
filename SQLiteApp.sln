@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteApp.iOS", "SQLiteApp.iOS\SQLiteApp.iOS.csproj", "{7937CB5B-1538-42BF-9891-3F8293A5B534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteApp.Droid", "SQLiteApp.Droid\SQLiteApp.Droid.csproj", "{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SQLiteApp.Core", "SQLiteApp.Core\SQLiteApp.Core.shproj", "{CF6A3A4D-A2A8-4FDE-BF93-142EA08DF940}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Debug|iPhone.Build.0 = Debug|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Release|iPhone.ActiveCfg = Release|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Release|iPhone.Build.0 = Release|iPhone
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{7937CB5B-1538-42BF-9891-3F8293A5B534}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Release|iPhone.Build.0 = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{F18D57FE-B0C1-4B3E-931C-CCD259D3F05D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SQLiteApp.iOS\SQLiteApp.iOS.csproj
+	EndGlobalSection
+EndGlobal

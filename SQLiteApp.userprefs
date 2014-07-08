@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina4.7.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SQLiteApp.Core/Database.cs">
+    <Files>
+      <File FileName="../../Desktop/SQLiteApp/Store.cs" Line="1" Column="1" />
+      <File FileName="SQLiteApp.iOS/TableView Sources/OrderSummarySource.cs" Line="3" Column="28" />
+      <File FileName="SQLiteApp.Core/Database.cs" Line="38" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
