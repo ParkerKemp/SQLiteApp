@@ -56,6 +56,11 @@ namespace SQLiteApp
 			TerritoryNum = territoryNum;
 		}
 
+		public bool MatchesName(string searchTerm)
+		{
+			return Regex.IsMatch(StoreName, "^.*" + searchTerm + ".*$", RegexOptions.IgnoreCase);
+		}
+
 		public static bool ValidStoreID(string input)
 		{
 			return Regex.IsMatch(input, "^[a-zA-Z0-9]{1,10}$");

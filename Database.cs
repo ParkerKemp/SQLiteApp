@@ -13,20 +13,20 @@ namespace SQLiteApp
 			_dbPath = dbPath;
 		}
 
-		public Store[] GetAllStores()
+		public List<Store> GetAllStores()
 		{
 			SqliteCommand command = new SqliteCommand("SELECT * FROM Stores");
 			return GetStoresFromCommand(command);
 		}
 
-		public Store[] SearchStores(string searchTerm)
+		public List<Store> SearchStores(string searchTerm)
 		{
 			SqliteCommand command = new SqliteCommand("SELECT * FROM Stores WHERE StoreName LIKE @SearchTerm");
 			command.Parameters.Add(new SqliteParameter("@SearchTerm", "%" + searchTerm + "%"));
 			return GetStoresFromCommand(command);
 		}
-
-		private Store[] GetStoresFromCommand(SqliteCommand command)
+		
+		private List<Store> GetStoresFromCommand(SqliteCommand command)
 		{
 			List<Store> ret = new List<Store>();
 			
@@ -46,10 +46,10 @@ namespace SQLiteApp
 					ret.Add(store);
 				}
 			}
-			return ret.ToArray();
+			return ret;
 		}
 
-		public void InsertStore(Store store)
+		public bool InsertStore(Store store)
 		{
 			string query = @"INSERT INTO Stores (TerritoryNum, SequenceNum, StoreName, StoreID, Address1, 
 							Address2, City, State, Zip, StoreNum, ManagerName, PhoneNum) VALUES (@TerritoryNum,
@@ -74,8 +74,13 @@ namespace SQLiteApp
 				command.Parameters.Add(new SqliteParameter("@ManagerName", store.ManagerName));
 				command.Parameters.Add(new SqliteParameter("@PhoneNum", store.PhoneNum));
 
-				command.ExecuteNonQuery();
+				try {
+					command.ExecuteNonQuery ();
+				} catch (Exception) {
+					return false;
+				}
 			}
+			return true;
 		}
 
 		public void GetOrderOverview(Store store)
